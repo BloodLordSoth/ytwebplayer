@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <style>
+        #form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 50px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px black;
+            width: 600px;
+            height: 400px;
+            background: #333;
+        }
+        #form input{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        #file {
+            border: 2px solid white;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            padding: 3px;
+            width: 400px;
+        }
+        #filename{
+            border: 2px solid white;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            width: 400px;
+        }
+        #description {
+            margin-left: 10px;
+            margin-top: 20px;
+            border: 2px solid white;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="logo">
+            <div id="box">
+                <div id="play"></div>
+            </div>
+            <h2>YouTube</h2>
+        </div>
+    </header>
+
+    <form id="form">
+        <input type="file" id="file"/>
+        <input type="text" autocomplete="off" id="filename" placeholder="Video Title"/>
+        <textarea placeholder="Video description..." id="description"></textarea>
+    </form>
+</body>
+</html>
