@@ -23,6 +23,36 @@ app.get('/upload', (req, res) => {
     res.sendFile(path.join(__dir, 'frontend', 'upload.html'))
 })
 
+app.get('/vids', async (req, res) => {
+    try {
+        const data = await pool.query('SELECT * FROM videos')
+        res.status(200).send(data.rows)
+    }
+    catch {
+        res.sendStatus(500)
+        console.error(e)
+    }
+})
+
+app.get('/videos/:id', async (req, res) => {
+    const id = req.params.id
+
+    if (!id) return res.sendStatus(401);
+
+    try {
+        const data = await pool.query(
+            'SELECT * FROM videos WHERE id = $1',
+            [id]
+        )
+        res.set('Content-Type', data.rows[0].mime_type)
+        res.status(200).send(data.rows[0].file)
+    }
+    catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+})
+
 app.post('/upload', upload.single('video'), async (req, res) => {
     if (!req.file) return res.sendStatus(401);
 

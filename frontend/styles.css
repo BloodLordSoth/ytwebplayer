@@ -99,9 +99,22 @@
         }
         #player {
             display: flex;
-            flex-direction: column;
+            flex-direction: space-between;
         }
-        #player h1{
+        #playlist {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-left: 50px;
+            margin-top: 10px;
+            border: 2px solid white;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            background: #333;
+        }
+        #vidtitle{
             margin-left: 50px;
             font-size: 26px;
             color: white;
@@ -178,6 +191,20 @@
             color: lightgreen;
             animation: blink 1s infinite;
             display: none;
+        }
+        .getlist {
+            margin-top: 10px;
+            padding: 3px;
+            height: fit-content;
+            width: fit-content;
+            background: #000;
+            color: white;
+            border-radius: 10px;
+        }
+        .getlist:hover {
+            cursor: pointer;
+            background: white;
+            color: black;
         }
 
         @keyframes blink {
