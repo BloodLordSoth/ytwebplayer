@@ -6,6 +6,7 @@
 ```
 - Youtube clone project, but not as pretty.
 - Upload and play video files from your computer
+- RECOMMENDED PC usage, Looks horrid on mobile.
 ```
 <br>
 
