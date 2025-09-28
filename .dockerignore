@@ -1,0 +1,5 @@
+.dockerignore
+.vscode
+.gitignore
+node_modules
+.env

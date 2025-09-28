@@ -1,0 +1,37 @@
+# Ytwebplayer
+
+<br>
+
+## Description
+```
+- Youtube clone project, but not as pretty.
+- Upload and play video files from your computer
+```
+<br>
+
+![Screenshot](./images/pickle.gif "screenshot picture")
+![Screenshot](./images/screenshot.png "screenshot picture")
+
+<br>
+
+## Installation
+
+```
+- Not currently hosted, uses localized Postgres DB.
+  will push a second version with better-sqlite3 for   demonstration.
+```
+
+<br>
+
+```
+- Frontend CSS/HTML/Javascript
+- Backend Node.js/express
+- Database Postgres
+- Dependencies: express, cors, dotenv, multer, pg
+- DevDependencies: nodemon, node-pg-migrate
+```
+<br>
+
+---
+### BloodLordSoth
+[Github](http:github.com/BloodLordSoth) | [youtube](http://youtube.com/@bloodlordsoth)
