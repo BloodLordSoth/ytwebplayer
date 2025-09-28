@@ -161,6 +161,30 @@
             height: 200px;
             width: 400px;
         }
+        #uploadvideo {
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+            border: none;
+            box-shadow: 2px 2px 4px black;
+            border-radius: 10px;
+            background: lightgreen;
+        }
+        #uploadvideo:hover {
+            cursor: pointer;
+            box-shadow: none;
+        }
+        #success {
+            color: lightgreen;
+            animation: blink 1s infinite;
+            display: none;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0%; }
+            50% { opacity: 100%; }
+            100% { opacity: 0%; }
+        }
 
         @keyframes show {
             0% { opacity: 0%; }
