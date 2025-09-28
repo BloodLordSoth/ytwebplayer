@@ -1,12 +1,62 @@
-body{
+        body{
             margin: 0;
             display: flex;
             flex-direction: column;
             background: #222;
         }
         header{
-            width: 100%;
             height: 70px;
+        }
+        #logo {
+            height: 70px;
+            width: 300px;
+            margin-left: 10px;
+        }
+        #menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+        }
+        #menu:hover {
+            background: #111;
+            cursor: pointer;
+        }
+        #l1, #l2, #l3 {
+            rotate: 90deg;
+            width: 3px;
+            height: 30px;
+            background: white;
+        }
+        #l1{
+            margin-top: 9px;
+        }
+        #l3 {
+            margin-bottom: 9px;
+        }
+        #menubox {
+            margin-left: 10px;
+            width: 150px;
+            height: 100px;
+            background: #111;
+            display: flex;
+            flex-direction: column;
+            animation: none;
+            opacity: 0%;
+        }
+        #b1, #b2, #b3 {
+            padding: 5px;
+            height: 32px;
+            color: white;
+        }
+        #b1:hover, #b2:hover, #b3:hover {
+            background: gold;
+            cursor: pointer;
+            color: black;
         }
         #logo h2 {
             font-family: impact;
@@ -16,7 +66,6 @@ body{
             
         }
         #box{
-            margin-left: 10px;
             display: flex;
             align-items: center;
             box-shadow: 2px 2px 4px black;
@@ -35,13 +84,13 @@ body{
             border-left: 10px solid white;
         }
         #logo{
-            width: 180px;
+            width: 230px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         video {
-            margin-top: 50px;
+            margin-top: 10px;
             border-radius: 10px;
             margin-left: 50px;
             width: 600px;
@@ -67,4 +116,54 @@ body{
         #container p{
             font-size: 18px;
             padding: 5px;
+        }
+
+        @keyframes show {
+            0% { opacity: 0%; }
+            100% { opacity: 100%; }
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 50px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px black;
+            width: 600px;
+            height: 400px;
+            background: #333;
+        }
+        #form input{
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        #file {
+            border: 2px solid white;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            padding: 3px;
+            width: 400px;
+        }
+        #filename{
+            border: 2px solid white;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            width: 400px;
+        }
+        #description {
+            margin-left: 10px;
+            margin-top: 20px;
+            border: 2px solid white;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            height: 200px;
+            width: 400px;
         }
