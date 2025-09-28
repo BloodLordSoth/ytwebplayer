@@ -2,6 +2,11 @@
 
 <br>
 
+## Demo
+[https://ytwebplayer.onrender.com](https://ytwebplayer.onrender.com)
+
+![Screenshot](./images/pickle.gif "screenshot picture")
+
 ## Description
 ```
 - Youtube clone project, but not as pretty.
@@ -10,20 +15,7 @@
 ```
 <br>
 
-![Screenshot](./images/pickle.gif "screenshot picture")
 ![Screenshot](./images/screenshot.png "screenshot picture")
-
-<br>
-
-## Installation
-
-```
-- No installation needed, app hosted on render
-```
-
-## App link
-[Ytwebplayer](https://ytwebplayer.onrender.com/)
-
 
 <br>
 
