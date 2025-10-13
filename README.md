@@ -5,7 +5,7 @@
 ## Demo
 [https://ytwebplayer.onrender.com](https://ytwebplayer.onrender.com)
 
-![Screenshot](./images/pickle.gif "screenshot picture")
+![Screenshot](./images/screenshot2.png "screenshot picture")
 
 ## Description
 ```
@@ -15,7 +15,7 @@
 ```
 <br>
 
-![Screenshot](./images/screenshot.png "screenshot picture")
+![Screenshot](./images/pickle.gif "screenshot picture")
 
 <br>
 
