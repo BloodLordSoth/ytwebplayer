@@ -50,10 +50,7 @@ b2.addEventListener('click', () => {
     window.location.href = '/upload'
 })
 
-menu.addEventListener('mouseenter', () => {
+menu.addEventListener('click', () => {
     menuBox.style.animation = 'show 0.5s forwards'
-})
-
-document.addEventListener('click', () => {
-    menuBox.style.animation = 'none'
+    menuBox.style.display = 'flex'
 })

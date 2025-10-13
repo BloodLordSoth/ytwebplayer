@@ -1,12 +1,15 @@
-import pkg from 'pg';
-import dotenv from 'dotenv';
+import Database from 'better-sqlite3'
 
-dotenv.config();
+const db = new Database('videos.db')
 
-const { Pool } = pkg;
+db.exec(`
+    CREATE TABLE IF NOT EXISTS videos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    file BLOB NOT NULL,
+    file_name TEXT NOT NULL,
+    mime_type TEXT NOT NULL,
+    description TEXT NOT NULL
+    );
+`)
 
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
-});
-
-export default pool;
+export default db;

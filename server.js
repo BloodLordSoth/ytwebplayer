@@ -3,7 +3,7 @@ import cors from 'cors'
 import { fileURLToPath } from 'url'
 import multer from 'multer'
 import path from 'path'
-import pool from './schema.js'
+import db from './schema.js'
 
 const app = express()
 const PORT = 4600
@@ -23,10 +23,10 @@ app.get('/upload', (req, res) => {
     res.sendFile(path.join(__dir, 'frontend', 'upload.html'))
 })
 
-app.get('/vids', async (req, res) => {
+app.get('/vids', (req, res) => {
     try {
-        const data = await pool.query('SELECT * FROM videos')
-        res.status(200).send(data.rows)
+        const data = db.prepare('SELECT * FROM videos').all()
+        res.status(200).send(data)
     }
     catch {
         res.sendStatus(500)
@@ -40,12 +40,9 @@ app.get('/videos/:id', async (req, res) => {
     if (!id) return res.sendStatus(401);
 
     try {
-        const data = await pool.query(
-            'SELECT * FROM videos WHERE id = $1',
-            [id]
-        )
-        res.set('Content-Type', data.rows[0].mime_type)
-        res.status(200).send(data.rows[0].file)
+        const data = db.prepare('SELECT * FROM videos WHERE id = ?').get(id)
+        res.set('Content-Type', data.mime_type)
+        res.status(200).send(data.file)
     }
     catch (e) {
         console.error(e)
@@ -59,10 +56,9 @@ app.post('/upload', upload.single('video'), async (req, res) => {
     const { name, description } = req.body
 
     try {
-        await pool.query(
-            'INSERT INTO videos (file, file_name, mime_type, description) VALUES ($1, $2, $3, $4)',
-            [req.file.buffer, name, req.file.mimetype, description]
-        )
+        const stmt = db.prepare('INSERT INTO videos (file, file_name, mime_type, description) VALUES (?, ?, ?, ?)')
+        stmt.run(req.file.buffer, name, req.file.mimetype, description)
+
         res.sendStatus(200)
     }
     catch (e) {
